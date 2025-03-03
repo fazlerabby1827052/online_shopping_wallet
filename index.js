@@ -117,7 +117,7 @@ setTimeout(()=>{
         localStorage.removeItem("currentUser");
         window.location.reload();
     }
-},180000);
+},40000);
 
 regSubmit.addEventListener('click',(e)=>{
     e.preventDefault();
@@ -130,8 +130,9 @@ regSubmit.addEventListener('click',(e)=>{
 
 
     
-    
-    if(regUser.value.length==0 || regPassword.value.length===0){
+    const uid=regUser.value.trim();
+    const upass=regPassword.value.trim();
+    if(uid==0 || upass===0){
         alert("please give username and password");
         return;
     }
@@ -265,7 +266,7 @@ addmoneysubmit.addEventListener('click',(e)=>{
     }
     else{
         if(isNumber(addmoneyinput.value)){
-            if(addmoneyinput.value<0){
+            if(addmoneyinput.value<=0){
                 alert("give a positive value please!");
                 return;
             }
@@ -318,8 +319,8 @@ function fetchproduct(){
 addproductbtn.addEventListener('click',(e)=>{card
     e.preventDefault();
     
-    const namep=addproductname.value;
-    const pricep=addproductprice.value;
+    const namep=addproductname.value.trim();
+    const pricep=addproductprice.value.trim();
     if(isNumber(pricep)===true){
         if(namep.length===0 || pricep.length===0){
             alert("give product name and price");
@@ -365,6 +366,7 @@ if(product.length){
 
         val3.addEventListener('click',(e)=>{
             e.preventDefault();
+            
             users=userfetch();
             let val4=JSON.parse(localStorage.getItem("currentUser"));
             let userone=userinfo(val4);
