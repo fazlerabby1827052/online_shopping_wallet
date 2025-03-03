@@ -133,7 +133,7 @@ regSubmit.addEventListener('click',(e)=>{
     
     const uid=regUser.value.trim();
     const upass=regPassword.value.trim();
-    console.log(upass);
+    // console.log(upass);
     if(uid==="" || upass===""){
         alert("please give username and password");
         
@@ -165,7 +165,6 @@ regSubmit.addEventListener('click',(e)=>{
         let it=localStorage.getItem("autoincrement");
         let it2=JSON.parse(it);
         it2++;
-        console.log(it);
         useridone=it2;
 
         let it3=JSON.stringify(useridone);
