@@ -109,15 +109,16 @@ function userfetch(){
     const val2=JSON.parse(val);
     return val2;
 }
+regUser.value="";
+regPassword.value="";
 
 
-
-setTimeout(()=>{
-    if(localStorage.getItem("currentUser")!==null){
-        localStorage.removeItem("currentUser");
-        window.location.reload();
-    }
-},40000);
+// setTimeout(()=>{
+//     if(localStorage.getItem("currentUser")!==null){
+//         localStorage.removeItem("currentUser");
+//         window.location.reload();
+//     }
+// },180000);
 
 regSubmit.addEventListener('click',(e)=>{
     e.preventDefault();
@@ -132,8 +133,10 @@ regSubmit.addEventListener('click',(e)=>{
     
     const uid=regUser.value.trim();
     const upass=regPassword.value.trim();
-    if(uid==0 || upass===0){
+    console.log(upass);
+    if(uid==="" || upass===""){
         alert("please give username and password");
+        
         return;
     }
     let f=false;
@@ -322,7 +325,7 @@ addproductbtn.addEventListener('click',(e)=>{card
     const namep=addproductname.value.trim();
     const pricep=addproductprice.value.trim();
     if(isNumber(pricep)===true){
-        if(namep.length===0 || pricep.length===0){
+        if(namep.length===0 || pricep.length===0 || parseFloat(pricep)<=0 ){
             alert("give product name and price");
         }
         else{
@@ -366,7 +369,6 @@ if(product.length){
 
         val3.addEventListener('click',(e)=>{
             e.preventDefault();
-            
             users=userfetch();
             let val4=JSON.parse(localStorage.getItem("currentUser"));
             let userone=userinfo(val4);
