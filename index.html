@@ -8,65 +8,90 @@
 </head>
 <body>
 
-    <div id="register">
+    
+    <div class="reg">
+        <div id="register">
 
-        <form action="">
-            <label for="username">username</label>
-            <input type="text" name="username" value="" id="regUser"><br>
-            <label for="password">password</label>
-            <input type="password" name="password" id="regPassword"><br>
-            <button type="submit" id="regSubmit">Register</button>
-        </form>
-        <div>already Register?</div>
-        <button type="submit" id="redirectLogin">Login</button>
+            <form action="">
+                <label for="username">username</label>
+                <input type="text" name="username" value="" id="regUser"><br>
+                <label for="password">password</label>
+                <input type="password" name="password" id="regPassword"><br>
+                <button type="submit" id="regSubmit">Register</button>
+            </form>
+            <div>already Register?</div>
+            <button type="submit" id="redirectLogin">Login</button>
+        </div>
     </div>
-    <div id="login">
-        <form action="">
-            <label for="username">username</label>
-            <input type="text" name="username" value="" id="logUser"><br>
-            <label for="password">password</label>
-            <input type="password" name="password" id="logPassword"><br>
-            <button type="submit" id="logSubmit">log in</button>
-        </form>
+    <div class="log">
+        <div id="login">
+            <form action="">
+                <label for="username">username</label>
+                <input type="text" name="username" value="" id="logUser"><br>
+                <label for="password">password</label>
+                <input type="password" name="password" id="logPassword"><br>
+                <button type="submit" id="logSubmit">log in</button>
+            </form>
+        </div>
     </div>
-    <div id="wallet">
-        Your Current balance is <span id="walletspan"></span>
-        <button type="submit" id="logoutbtn">logout</button>
-        <br>
-        <br>
-        Add Money
-        <form action="">
-            <input type="number" name=""  id="addmoneyinput">
-            <button type="submit" id="addmoneysubmit">Add</button>
-        </form>
-
-        <br>
-        <br>
-        <div>Add product</div>
-        <form action="">
-            <label for="name">Product name:</label>
-            <input type="text" name="name" id="addproductname">
+    <div class="wall">
+        <div id="wallet">
+            Your Current balance is <span id="walletspan"></span>
+            <button type="submit" id="logoutbtn">logout</button>
             <br>
-            <label for="price">Price:</label>
-            <input type="number" name="price" id="addproductprice">
-            <button type="submit" id="addproductbtn">Add Product</button>
-        </form>
-
+            <br>
+            Add Money
+            <form action="">
+                <input type="number" name=""  id="addmoneyinput">
+                <button type="submit" id="addmoneysubmit">Add</button>
+            </form>
+    
+            <div id="addmoneysuccess">
+                succesfully addmoney
+            </div>
+    
+            <br>
+            <br>
+            <div>Add product</div>
+            <form action="">
+                <label for="name">Product name:</label>
+                <input type="text" name="name" id="addproductname">
+                <br>
+                <label for="price">Price:</label>
+                <input type="number" name="price" id="addproductprice">
+                <button type="submit" id="addproductbtn">Add Product</button>
+            </form>
+    
+    
+            <div id="spendamountcard">
+                Total spend <span id="totalspend"></span>
+            </div>
+    
+            <br>
+            <br>
+            <div id="card"></div>
+            
+        </div>
+    
+        <div id="registersuccess">
+            successfully register
+        </div>
+        <div id="loginsuccess">
+            successfully login
+        </div>
+        <div id="purchasesuccess">
+            successfully purchase.
+            <div>Your Balance <span id="purchaseSpan"></span></div>
+        </div>
         <br>
         <br>
-        <div id="card"></div>
-        
-    </div>
-
-    <div id="registersuccess">
-        successfully register
-    </div>
-    <div id="loginsuccess">
-        successfully login
-    </div>
-    <div id="purchasesuccess">
-        successfully purchase.
-        <div>Your Balance <span id="purchaseSpan"></span></div>
+    
+        <div id="lasttransactions">
+            <div>Last Five Trasaction</div>
+            <div id="transactiondiv">
+    
+            </div>
+        </div>
     </div>
 
     <script src="./index.js"></script>

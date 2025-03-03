@@ -1,3 +1,19 @@
+body{
+    background-color: aqua;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; */
+}
+
+
+
+
 .notshow{
     display: none;
 }
+
+.givemargin{
+    margin-top: 2px;
+}
+
